@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Resizable Table with Draggable Columns</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="controls">
+      <label><input type="checkbox" data-col="1" checked /> Column 1</label>
+      <label><input type="checkbox" data-col="2" checked /> Column 2</label>
+      <label><input type="checkbox" data-col="3" checked /> Column 3</label>
+      <label><input type="checkbox" data-col="4" checked /> Column 4</label>
+      <button id="resetButton">Reset Table</button>
+    </div>
+
+    <section class="table-section">
+      <div class="table-section_header">
+        <h3>Search Results</h3>
+        <img src="/icons/line.svg" />
+        <h5>Selected 6/45</h5>
+      </div>
+
+      <div class="table-container">
+        <!-- Table Header -->
+        <div class="table-row header-row">
+          <div class="cell header fixed-column">
+            <label class="custom-checkbox">
+              <input type="checkbox" id="myCheckbox" />
+              <span class="checkmark"></span>
+            </label>
+          </div>
+          <div class="cell header draggable" data-col="1">
+            <p>Site Name</p>
+            <img src="/icons/sortarrow.svg" alt="" />
+            <div class="resizer"></div>
+          </div>
+          <div class="cell header draggable" data-col="2">
+            <p>Location Name</p>
+            <img src="/icons/sortarrow.svg" alt="" />
+            <div class="resizer"></div>
+          </div>
+          <div class="cell header draggable" data-col="3">
+            <p>Asset Name</p>
+            <img src="/icons/sortarrow.svg" alt="" />
+            <div class="resizer"></div>
+          </div>
+          <div class="cell header draggable" data-col="4">
+            <p>Labels</p>
+            <img src="/icons/sortarrow.svg" alt="" />
+          </div>
+          <div class="cell header fixed-column"></div>
+        </div>
+
+        <!-- Data Rows -->
+        <div class="table-row">
+          <div class="cell fixed-column">
+            <label class="custom-checkbox">
+              <input type="checkbox" id="myCheckbox" />
+              <span class="checkmark"></span>
+            </label>
+          </div>
+          <div class="cell" data-col="1"><p>Site Name</p></div>
+          <div class="cell" data-col="2"><p>Location Name</p></div>
+          <div class="cell" data-col="3"><p>Asset Name</p></div>
+          <div class="cell" data-col="4"><p>Labels</p></div>
+          <div class="cell fixed-column">
+            <img src="/icons/editicon.svg" alt="" />
+          </div>
+        </div>
+        <div class="table-row">
+          <div class="cell fixed-column">
+            <label class="custom-checkbox">
+              <input type="checkbox" id="myCheckbox" />
+              <span class="checkmark"></span>
+            </label>
+          </div>
+          <div class="cell" data-col="1"><p>Site Name</p></div>
+          <div class="cell" data-col="2"><p>Location Name</p></div>
+          <div class="cell" data-col="3"><p>Asset Name</p></div>
+          <div class="cell" data-col="4"><p>Labels</p></div>
+          <div class="cell fixed-column">
+            <img src="/icons/editicon.svg" alt="" />
+          </div>
+        </div>
+        <div class="table-row">
+          <div class="cell fixed-column">
+            <label class="custom-checkbox">
+              <input type="checkbox" id="myCheckbox" />
+              <span class="checkmark"></span>
+            </label>
+          </div>
+          <div class="cell" data-col="1"><p>Site Name</p></div>
+          <div class="cell" data-col="2"><p>Location Name</p></div>
+          <div class="cell" data-col="3"><p>Asset Name</p></div>
+          <div class="cell" data-col="4"><p>Labels</p></div>
+          <div class="cell fixed-column">
+            <img src="/icons/editicon.svg" alt="" />
+          </div>
+        </div>
+        <div class="table-row">
+          <div class="cell fixed-column">
+            <label class="custom-checkbox">
+              <input type="checkbox" id="myCheckbox" />
+              <span class="checkmark"></span>
+            </label>
+          </div>
+          <div class="cell" data-col="1"><p>Site Name</p></div>
+          <div class="cell" data-col="2"><p>Location Name</p></div>
+          <div class="cell" data-col="3"><p>Asset Name</p></div>
+          <div class="cell" data-col="4"><p>Labels</p></div>
+          <div class="cell fixed-column">
+            <img src="/icons/editicon.svg" alt="" />
+          </div>
+        </div>
+        <div class="table-row">
+          <div class="cell fixed-column">
+            <label class="custom-checkbox">
+              <input type="checkbox" id="myCheckbox" />
+              <span class="checkmark"></span>
+            </label>
+          </div>
+          <div class="cell" data-col="1"><p>Site Name</p></div>
+          <div class="cell" data-col="2"><p>Location Name</p></div>
+          <div class="cell" data-col="3"><p>Asset Name</p></div>
+          <div class="cell" data-col="4"><p>Labels</p></div>
+          <div class="cell fixed-column">
+            <img src="/icons/editicon.svg" alt="" />
+          </div>
+        </div>
+        <div class="table-row">
+          <div class="cell fixed-column">
+            <label class="custom-checkbox">
+              <input type="checkbox" id="myCheckbox" />
+              <span class="checkmark"></span>
+            </label>
+          </div>
+          <div class="cell" data-col="1"><p>Site Name</p></div>
+          <div class="cell" data-col="2"><p>Location Name</p></div>
+          <div class="cell" data-col="3"><p>Asset Name</p></div>
+          <div class="cell" data-col="4"><p>Labels</p></div>
+          <div class="cell fixed-column">
+            <img src="/icons/editicon.svg" alt="" />
+          </div>
+        </div>
+        <div class="table-row">
+          <div class="cell fixed-column">
+            <label class="custom-checkbox">
+              <input type="checkbox" id="myCheckbox" />
+              <span class="checkmark"></span>
+            </label>
+          </div>
+          <div class="cell" data-col="1"><p>Site Name</p></div>
+          <div class="cell" data-col="2"><p>Location Name</p></div>
+          <div class="cell" data-col="3"><p>Asset Name</p></div>
+          <div class="cell" data-col="4"><p>Labels</p></div>
+          <div class="cell fixed-column">
+            <img src="/icons/editicon.svg" alt="" />
+          </div>
+        </div>
+        <div class="table-row">
+          <div class="cell fixed-column">
+            <label class="custom-checkbox">
+              <input type="checkbox" id="myCheckbox" />
+              <span class="checkmark"></span>
+            </label>
+          </div>
+          <div class="cell" data-col="1"><p>Site Name</p></div>
+          <div class="cell" data-col="2"><p>Location Name</p></div>
+          <div class="cell" data-col="3"><p>Asset Name</p></div>
+          <div class="cell" data-col="4"><p>Labels</p></div>
+          <div class="cell fixed-column">
+            <img src="/icons/editicon.svg" alt="" />
+          </div>
+        </div>
+        <div class="table-row">
+          <div class="cell fixed-column">
+            <label class="custom-checkbox">
+              <input type="checkbox" id="myCheckbox" />
+              <span class="checkmark"></span>
+            </label>
+          </div>
+          <div class="cell" data-col="1"><p>Site Name</p></div>
+          <div class="cell" data-col="2"><p>Location Name</p></div>
+          <div class="cell" data-col="3"><p>Asset Name</p></div>
+          <div class="cell" data-col="4"><p>Labels</p></div>
+          <div class="cell fixed-column">
+            <img src="/icons/editicon.svg" alt="" />
+          </div>
+        </div>
+        <div class="table-row">
+          <div class="cell fixed-column">
+            <label class="custom-checkbox">
+              <input type="checkbox" id="myCheckbox" />
+              <span class="checkmark"></span>
+            </label>
+          </div>
+          <div class="cell" data-col="1"><p>Site Name</p></div>
+          <div class="cell" data-col="2"><p>Location Name</p></div>
+          <div class="cell" data-col="3"><p>Asset Name</p></div>
+          <div class="cell" data-col="4"><p>Labels</p></div>
+          <div class="cell fixed-column">
+            <img src="/icons/editicon.svg" alt="" />
+          </div>
+        </div>
+        <div class="table-row">
+          <div class="cell fixed-column">
+            <label class="custom-checkbox">
+              <input type="checkbox" id="myCheckbox" />
+              <span class="checkmark"></span>
+            </label>
+          </div>
+          <div class="cell" data-col="1"><p>Site Name</p></div>
+          <div class="cell" data-col="2"><p>Location Name</p></div>
+          <div class="cell" data-col="3"><p>Asset Name</p></div>
+          <div class="cell" data-col="4"><p>Labels</p></div>
+          <div class="cell fixed-column">
+            <img src="/icons/editicon.svg" alt="" />
+          </div>
+        </div>
+        <div class="table-row">
+          <div class="cell fixed-column">
+            <label class="custom-checkbox">
+              <input type="checkbox" id="myCheckbox" />
+              <span class="checkmark"></span>
+            </label>
+          </div>
+          <div class="cell" data-col="1"><p>Site Name</p></div>
+          <div class="cell" data-col="2"><p>Location Name</p></div>
+          <div class="cell" data-col="3"><p>Asset Name</p></div>
+          <div class="cell" data-col="4"><p>Labels</p></div>
+          <div class="cell fixed-column">
+            <img src="/icons/editicon.svg" alt="" />
+          </div>
+        </div>
+        <div class="table-row">
+          <div class="cell fixed-column">
+            <label class="custom-checkbox">
+              <input type="checkbox" id="myCheckbox" />
+              <span class="checkmark"></span>
+            </label>
+          </div>
+          <div class="cell" data-col="1"><p>Site Name</p></div>
+          <div class="cell" data-col="2"><p>Location Name</p></div>
+          <div class="cell" data-col="3"><p>Asset Name</p></div>
+          <div class="cell" data-col="4"><p>Labels</p></div>
+          <div class="cell fixed-column">
+            <img src="/icons/editicon.svg" alt="" />
+          </div>
+        </div>
+        <div class="table-row">
+          <div class="cell fixed-column">
+            <label class="custom-checkbox">
+              <input type="checkbox" id="myCheckbox" />
+              <span class="checkmark"></span>
+            </label>
+          </div>
+          <div class="cell" data-col="1"><p>Site Name</p></div>
+          <div class="cell" data-col="2"><p>Location Name</p></div>
+          <div class="cell" data-col="3"><p>Asset Name</p></div>
+          <div class="cell" data-col="4"><p>Labels</p></div>
+          <div class="cell fixed-column">
+            <img src="/icons/editicon.svg" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="columnWidthsDisplay"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
